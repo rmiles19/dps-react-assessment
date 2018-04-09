@@ -3,8 +3,12 @@ import NoMatch from './NoMatch';
 import NavBar from './NavBar';
 import Flash from './Flash';
 import Home from './Home';
+import Beers from './Beers';
+import Breweries from './Breweries';
 import { Switch, Route } from 'react-router-dom';
 import { Segment } from 'semantic-ui-react';
+
+
 
 class App extends Component {
   render() {
@@ -14,6 +18,8 @@ class App extends Component {
         <Flash />
         <Switch>
           <Route exact path='/' component={Home} />
+          <Route exact path='./Breweries' component={Breweries} />
+          <Route exact path='./Beers' component={Beers} />
           <Route component={NoMatch} />
         </Switch>
       </Segment>
@@ -28,3 +34,7 @@ const styles = {
 }
 
 export default App;
+
+
+
+
